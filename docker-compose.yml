@@ -30,3 +30,6 @@ services:
     restart: unless-stopped
 volumes:
   mongo_data:
+    external: true
+    name: springboot-mongodb-devops_mongo_data
+
