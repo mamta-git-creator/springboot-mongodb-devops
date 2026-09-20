@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  environment { IMAGE = "YOUR_DOCKERHUB_USERNAME/devops-demo" }
+  environment { IMAGE = "mamtadockerhub/devops-demo" }
   stages {
     stage('Checkout') { steps { checkout scm } }
     stage('Test') { steps { sh 'mvn -B test' } }
