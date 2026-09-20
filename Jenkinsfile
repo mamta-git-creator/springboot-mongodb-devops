@@ -15,8 +15,9 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'docker compose pull || true'
-        sh 'docker compose up -d --build'
+         sh 'docker compose pull || true'
+        sh 'docker compose build app'
+        sh 'docker compose up -d app nginx'
       }
     }
   }
