@@ -17,7 +17,7 @@ pipeline {
       steps {
          sh 'docker compose pull || true'
         sh 'docker compose build app'
-        sh 'docker compose up -d app nginx'
+        sh 'docker compose up -d --no-deps app nginx'
       }
     }
   }
