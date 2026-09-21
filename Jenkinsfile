@@ -17,7 +17,7 @@ pipeline {
       steps {
          sh 'docker compose pull || true'
         sh 'docker compose build app'
-        sh 'docker compose rm -sf app'
+        sh 'docker rm -f devops-demo-app || true'
         sh 'docker compose up -d --no-deps app nginx'
       }
     }
